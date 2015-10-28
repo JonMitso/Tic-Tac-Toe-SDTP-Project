@@ -8,26 +8,25 @@ namespace MyGame
 	{
 		private const int HEIGHT = 50;
 		private const int WIDTH = 50;
-		private const Color COLOR = Color.Black;
+		private Color COLOR = Color.Black;
 		private const int RADIUS = 24;
 		private float _x, _y;
 		private bool _selected;
 
-		public Square ()
+		public Square (int x, int y)
 		{
-			
+			_x = x;
+			_y = x;
 		}
 
-		public Color Color
+		public int Height
 		{
-			get
-			{
-				return _color;
-			}
-			set
-			{
+			get { return HEIGHT; }
+		}
 
-			}
+		public int Width
+		{
+			get { return WIDTH; }
 		}
 
 		public float X
@@ -46,22 +45,6 @@ namespace MyGame
 			}
 		}
 
-		public float Height
-		{
-			get
-			{
-				return _height;
-			}
-		}
-
-		public float Width
-		{
-			get
-			{
-				return _width;
-			}
-		}
-
 		public bool Selected
 		{
 			get
@@ -74,18 +57,18 @@ namespace MyGame
 			}
 		}
 
-		public static void Draw ()
+		public void Draw ()
 		{
 			SwinGame.FillRectangle (COLOR, _x, _y, WIDTH, HEIGHT);
 		}
 
-		public static void DrawCross ()
+		public void DrawCross ()
 		{
 			SwinGame.DrawLine ( Color.White, this.X + 2, this.Y + 2, this.X + 48, this.Y + 48);
 			SwinGame.DrawLine ( Color.White, this.X + 2, this.Y + 48, this.X + 48, this.Y + 2);
 		}
 
-		public static void DrawNaught ()
+		public void DrawNaught ()
 		{
 			SwinGame.DrawCircle ( Color.White, this.X + 2, this.Y + 2, RADIUS );
 		}

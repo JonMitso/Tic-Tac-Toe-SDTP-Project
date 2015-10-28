@@ -12,7 +12,9 @@ namespace MyGame
             SwinGame.ShowSwinGameSplashScreen();
 
 			GameResources.LoadResources();
-            
+
+			//create grid
+			Grid myGrid = new Grid ();
             //Run the game loop
             while(false == SwinGame.WindowCloseRequested())
             {
@@ -22,7 +24,12 @@ namespace MyGame
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
                 SwinGame.DrawFramerate(0,0);
-                
+		
+				if (SwinGame.MouseClicked(MouseButton.LeftButton))
+				{
+					myGrid.SelectSquareAt (SwinGame.MousePosition);
+				}
+
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
             }
