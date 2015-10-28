@@ -9,6 +9,11 @@ namespace MyGame
 		{
 			
 		}
+
+		public static void DrawScreen ()
+		{
+			
+		}
 	}
 }
 

@@ -10,6 +10,11 @@ namespace MyGame
 			
 		}
 
+		public static void LoadFonts ()
+		{
+
+		}
+
 		public static void LoadImages ()
 		{
 
@@ -23,6 +28,26 @@ namespace MyGame
 		public static void LoadResources ()
 		{
 			
+		}
+
+		private static void FreeFonts ()
+		{
+
+		}
+
+		private static void FreeImages ()
+		{
+
+		}
+
+		private static void FreeSounds ()
+		{
+
+		}
+
+		private static void FreeResources ()
+		{
+
 		}
 	}
 }

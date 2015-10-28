@@ -6,16 +6,29 @@ namespace MyGame
 {
 	public class Square
 	{
-		private const int HEIGHT = 50;
-		private const int WIDTH = 50;
-		private const Color COLOR = Color.Black;
-		private const int RADIUS = 24;
+		//constant base values
+		private const int HEIGHT = 175;
+		private const int WIDTH = 175;
+		private const int RADIUS = 86;
+
+		//fields
+		private int _width, _height;
 		private float _x, _y;
+		private Color _color;
 		private bool _selected;
 
-		public Square ()
+		public Square (Color color, int width, int height, float x, float y)
 		{
-			
+			_color = color;
+			_width = width;
+			_height = height;
+			_x = x;
+			_y = y;
+		}
+
+		public Square () : this (Color.Black, 25, 25, 25, 25)
+		{
+
 		}
 
 		public Color Color
@@ -26,7 +39,7 @@ namespace MyGame
 			}
 			set
 			{
-
+				_color = value;
 			}
 		}
 
@@ -36,6 +49,10 @@ namespace MyGame
 			{
 				return _x;
 			}
+			set
+			{
+				_x = value;
+			}
 		}
 
 		public float Y
@@ -44,21 +61,33 @@ namespace MyGame
 			{
 				return _y;
 			}
+			set
+			{
+				_y = value;
+			}
 		}
 
-		public float Height
+		public int Height
 		{
 			get
 			{
 				return _height;
 			}
+			set
+			{
+				_height = value;
+			}
 		}
 
-		public float Width
+		public int Width
 		{
 			get
 			{
 				return _width;
+			}
+			set
+			{
+				_width = value;
 			}
 		}
 
@@ -74,20 +103,38 @@ namespace MyGame
 			}
 		}
 
-		public static void Draw ()
+		public bool IsAt (Point2D pt)
 		{
-			SwinGame.FillRectangle (COLOR, _x, _y, WIDTH, HEIGHT);
+			if (SwinGame.PointInRect (pt, _x, _y, _width, _height))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 
-		public static void DrawCross ()
+		public void Draw ( float x, float y, int width, int height)
 		{
-			SwinGame.DrawLine ( Color.White, this.X + 2, this.Y + 2, this.X + 48, this.Y + 48);
-			SwinGame.DrawLine ( Color.White, this.X + 2, this.Y + 48, this.X + 48, this.Y + 2);
+			_x = x;
+			_y = y;
+			_width = width;
+			_height = height;
+			SwinGame.FillRectangle (_color, x, y, width, height);
+			if (Selected)
+				DrawNaught ();
 		}
 
-		public static void DrawNaught ()
+		public void DrawCross ()
 		{
-			SwinGame.DrawCircle ( Color.White, this.X + 2, this.Y + 2, RADIUS );
+			SwinGame.DrawLine ( Color.White, _x, _y, _x + _width, _y + _height);
+			SwinGame.DrawLine ( Color.White, _x, _y + _height, _x + _width, _y);
+		}
+
+		public void DrawNaught ()
+		{
+			SwinGame.DrawCircle ( Color.White, (_x + (_width / 2)), (_y + (_height / 2)), RADIUS );
 		}
 	}
 }

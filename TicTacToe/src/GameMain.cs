@@ -8,11 +8,11 @@ namespace MyGame
         public static void Main()
         {
             //Open the game window
-            SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
-            SwinGame.ShowSwinGameSplashScreen();
+            SwinGame.OpenGraphicsWindow("TicTacToe", 800, 600);
+            //SwinGame.ShowSwinGameSplashScreen();
 
-			GameResources.LoadResources();
-            
+			//GameResources.LoadResources();
+			Grid grid = new Grid ();
             //Run the game loop
             while(false == SwinGame.WindowCloseRequested())
             {
@@ -21,7 +21,16 @@ namespace MyGame
                 
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.White);
-                SwinGame.DrawFramerate(0,0);
+
+				grid.GridDraw ();
+
+				if (SwinGame.MouseClicked (MouseButton.LeftButton))
+				{
+					grid.SelectSquareAt (SwinGame.MousePosition ());
+
+				}
+
+				SwinGame.DrawFramerate(0,0);
                 
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
