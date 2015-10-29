@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
+	/// <summary>
+	/// Creates a Swingame drawing of the 3x3 grid layout
+	/// </summary>
 	public class Grid
 	{
 		//constant base values
@@ -17,12 +20,16 @@ namespace MyGame
 		{
 			_squares = new List<Square> ();
 
-			for (int i = 0; i < 9; i++)
+			//creates nine new square objects and adds them to the field _squares
+			for (int i = 0; i < 9; i++)	
 			{
 				_squares.Add ( new Square ());
 			}
 		}
 
+		/// <summary>
+		/// Accesses the individual objects and positions each square accordingly to create a grid structure
+		/// </summary>
 		public void GridDraw ()
 		{
 			_squares [0].Draw (25, 25, WIDTH, HEIGHT);
@@ -36,10 +43,15 @@ namespace MyGame
 			_squares [8].Draw (379, 379, WIDTH, HEIGHT);
 		}
 
+		/// <summary>
+		/// Sets the boolean value _selected equal to true if the user clicks on a square
+		/// </summary>
+		/// <param name="pt">Point2D</param>
 		public void SelectSquareAt (Point2D pt)
 		{
 			foreach (Square s in _squares)
 			{
+				//Determines whether the position of the mouse pointer when the user clicks is inside a square, if it is set the _selected field to true
 				if (s.IsAt (pt))
 				{
 					s.Selected = true;
@@ -48,4 +60,3 @@ namespace MyGame
 		}
 	}
 }
-
