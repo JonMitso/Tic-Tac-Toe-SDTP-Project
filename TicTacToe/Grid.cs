@@ -47,13 +47,27 @@ namespace MyGame
 		/// Sets the boolean value _selected equal to true if the user clicks on a square
 		/// </summary>
 		/// <param name="pt">Point2D</param>
-		public void SelectSquareAt (Point2D pt)
+		public void SelectSquareAtR (Point2D pt)
 		{
 			foreach (Square s in _squares)
 			{
 				//Determines whether the position of the mouse pointer when the user clicks is inside a square, if it is set the _selected field to true
 				if (s.IsAt (pt))
 				{
+					s.Turn = true;
+					s.Selected = true;
+				}
+			}
+		}
+
+		public void SelectSquareAtL (Point2D pt)
+		{
+			foreach (Square s in _squares)
+			{
+				//Determines whether the position of the mouse pointer when the user clicks is inside a square, if it is set the _selected field to true
+				if (s.IsAt (pt))
+				{
+					s.Turn = false;
 					s.Selected = true;
 				}
 			}

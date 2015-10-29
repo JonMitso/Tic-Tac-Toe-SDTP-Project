@@ -16,6 +16,7 @@ namespace MyGame
 		private float _x, _y;
 		private Color _color;
 		private bool _selected;
+		private bool _turn;
 
 		public Square (Color color, int width, int height, float x, float y)
 		{
@@ -103,6 +104,12 @@ namespace MyGame
 			}
 		}
 
+		public bool Turn
+		{
+			get { return _turn; }
+			set { _turn = value; }
+		}
+
 		public bool IsAt (Point2D pt)
 		{
 			if (SwinGame.PointInRect (pt, _x, _y, _width, _height))
@@ -122,8 +129,16 @@ namespace MyGame
 			_width = width;
 			_height = height;
 			SwinGame.FillRectangle (_color, x, y, width, height);
-			if (Selected)
+
+			if ((Selected == true) && (_turn == true))
+			{
 				DrawNaught ();
+			}
+
+			if ((Selected == true) && (_turn == false))
+			{
+				DrawCross ();
+			}
 		}
 
 		public void DrawCross ()
@@ -138,4 +153,3 @@ namespace MyGame
 		}
 	}
 }
-

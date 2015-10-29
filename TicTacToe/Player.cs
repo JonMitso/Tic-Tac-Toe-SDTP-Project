@@ -7,7 +7,6 @@ namespace MyGame
 	{
 		private string _name;
 		private int _score;
-
 		public Player ( string name )
 		{
 			_name = name;
@@ -35,4 +34,3 @@ namespace MyGame
 		}
 	}
 }
-

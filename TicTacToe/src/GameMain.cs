@@ -26,8 +26,12 @@ namespace MyGame
 
 				if (SwinGame.MouseClicked (MouseButton.LeftButton))
 				{
-					grid.SelectSquareAt (SwinGame.MousePosition ());
+					grid.SelectSquareAtL (SwinGame.MousePosition ());
+				}
 
+				if (SwinGame.MouseClicked (MouseButton.RightButton))
+				{
+					grid.SelectSquareAtR (SwinGame.MousePosition ());
 				}
 
 				SwinGame.DrawFramerate(0,0);
