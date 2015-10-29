@@ -10,9 +10,14 @@ namespace MyGame
 			
 		}
 
+		public static void LoadBundle ()
+		{
+			SwinGame.LoadResourceBundle ("TicTacToeBundle.txt");
+		}
+
 		public static void LoadFonts ()
 		{
-
+			
 		}
 
 		public static void LoadImages ()
@@ -27,7 +32,7 @@ namespace MyGame
 
 		public static void LoadResources ()
 		{
-			
+			LoadBundle ();
 		}
 
 		private static void FreeFonts ()

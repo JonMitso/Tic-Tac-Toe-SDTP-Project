@@ -123,7 +123,7 @@ namespace MyGame
 			_height = height;
 			SwinGame.FillRectangle (_color, x, y, width, height);
 			if (Selected)
-				DrawNaught ();
+				DrawCross ();
 		}
 
 		public void DrawCross ()

@@ -46,6 +46,14 @@ namespace MyGame
 				}
 			}
 		}
+
+		public void Reset ()
+		{
+			foreach (Square s in _squares)
+			{
+				s.Selected = false;
+			}
+		}
 	}
 }
 

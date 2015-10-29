@@ -68,7 +68,6 @@
     <Compile Include="GameResources.cs" />
     <Compile Include="ScoreController.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="SquareState.cs" />
     <Compile Include="MenuController.cs" />
     <Compile Include="Grid.cs" />
   </ItemGroup>
