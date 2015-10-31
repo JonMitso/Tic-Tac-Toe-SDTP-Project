@@ -3,21 +3,33 @@ using SwinGameSDK;
 using System.Collections.Generic;
 using Color = SwinGameSDK.Color;
 
+/// <summary>
+/// A Square.
+/// Squares are required in the grid.
+/// </summary>
 namespace MyGame
 {
 	public class Square
 	{
-		//constant base values
+		// Constant base values
 		private const int HEIGHT = 175;
 		private const int WIDTH = 175;
 		private const int RADIUS = 86;
 
-		//fields
+		// Square fields
 		private int _width, _height;
 		private float _x, _y;
 		private Color _color;
 		private bool _selected;
 
+		/// <summary>
+		/// Initializes a new Square.
+		/// </summary>
+		/// <param name="color">Color.</param>
+		/// <param name="width">Width.</param>
+		/// <param name="height">Height.</param>
+		/// <param name="x">The x coordinate.</param>
+		/// <param name="y">The y coordinate.</param>
 		public Square (Color color, int width, int height, float x, float y)
 		{
 			_color = color;
@@ -28,11 +40,18 @@ namespace MyGame
 			_selected = false;
 		}
 
+		/// <summary>
+		/// Base Square constructor.
+		/// </summary>
 		public Square () : this (Color.Black, 25, 25, 25, 25)
 		{
 			
 		}
 
+		/// <summary>
+		/// Gets or sets the color.
+		/// </summary>
+		/// <value>The color.</value>
 		public Color Color
 		{
 			get
@@ -45,6 +64,10 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the x value.
+		/// </summary>
+		/// <value>The x value.</value>
 		public float X
 		{
 			get
@@ -57,6 +80,10 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the y value.
+		/// </summary>
+		/// <value>The y value.</value>
 		public float Y
 		{
 			get
@@ -69,6 +96,10 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the height.
+		/// </summary>
+		/// <value>The height.</value>
 		public int Height
 		{
 			get
@@ -81,6 +112,10 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the width.
+		/// </summary>
+		/// <value>The width.</value>
 		public int Width
 		{
 			get
@@ -93,6 +128,10 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets a value indicating whether this Square is selected.
+		/// </summary>
+		/// <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
 		public bool Selected
 		{
 			get
@@ -105,6 +144,11 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Determines whether this instance is at the specified point.
+		/// </summary>
+		/// <returns><c>true</c> if this instance is at the specified pt; otherwise, <c>false</c>.</returns>
+		/// <param name="pt">Point.</param>
 		public bool IsAt (Point2D pt)
 		{
 			if (SwinGame.PointInRect (pt, X, Y, Width, Height))
@@ -117,6 +161,13 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Draw the Square.
+		/// </summary>
+		/// <param name="x">The x coordinate.</param>
+		/// <param name="y">The y coordinate.</param>
+		/// <param name="width">Width.</param>
+		/// <param name="height">Height.</param>
 		public void Draw ( float x, float y, int width, int height)
 		{
 			_x = x;
@@ -130,12 +181,18 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Draws the cross.
+		/// </summary>
 		public void DrawCross ()
 		{
 			SwinGame.DrawLine ( Color.White, _x, _y, _x + _width, _y + _height);
 			SwinGame.DrawLine ( Color.White, _x, _y + _height, _x + _width, _y);
 		}
 
+		/// <summary>
+		/// Draws the naught.
+		/// </summary>
 		public void DrawNaught ()
 		{
 			SwinGame.DrawCircle ( Color.White, (_x + (_width / 2)), (_y + (_height / 2)), RADIUS );

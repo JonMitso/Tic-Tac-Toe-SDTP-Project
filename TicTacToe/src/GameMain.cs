@@ -8,14 +8,15 @@ namespace MyGame
     {
         public static void Main()
         {
-			//Load game resources
+			// Load game resources
 			GameResources.LoadResources ();
 
-            //Open the game window
+            // Open the game window
             SwinGame.OpenGraphicsWindow("TicTacToe", 800, 600);
             //SwinGame.ShowSwinGameSplashScreen();
+			// Commented out splash screen for testing purposes
 
-            //Run the game loop
+            // Run the game loop until window is closed or the game state switches to quitting
 			do
             {
 				GameController.DrawScreen ();

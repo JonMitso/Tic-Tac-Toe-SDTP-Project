@@ -14,8 +14,12 @@ namespace MyGame
 		private const int WIDTH = 175;
 		private const int RADIUS = 24;
 
+		// The list of squares to be used in the grid
 		private List<Square> _squares;
 
+		/// <summary>
+		/// Initializes a new grid.
+		/// </summary>
 		public Grid ()
 		{
 			_squares = new List<Square> ();
@@ -59,6 +63,9 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Reset the grid to default state.
+		/// </summary>
 		public void Reset ()
 		{
 			foreach (Square s in _squares)
