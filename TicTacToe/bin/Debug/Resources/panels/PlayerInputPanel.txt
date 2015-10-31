@@ -9,10 +9,10 @@ d: false
 r: 180, 10, 60, 20, Label, Label1, arial, c, TicTacToe
 
 r: 20, 40, 80, 20, Label, Label2, arial, c, PlayerX
-r: 105, 40, 200, 20, TextBox, PlayerXTextBox, arial, 25, l, Input player name...
+r: 105, 40, 200, 20, TextBox, PlayerXTextBox, arial, 25, l, 
 
 r: 20, 80, 80, 20, Label, Label3, arial, c, PlayerO
-r: 105, 80, 200, 20, TextBox, PlayerOTextBox, arial, 25, l, Input player name...
+r: 105, 80, 200, 20, TextBox, PlayerOTextBox, arial, 25, l, 
 
+r: 175, 120, 50, 30, Button, InputButton1
 r: 173, 127, 50, 20, Label, Label4, arial, c, GO
-r: 175, 120, 50, 30, Button, Button1

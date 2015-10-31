@@ -8,8 +8,8 @@ d: false
 // Format: r: x, y, w, h, kind 
 r: 100, 10, 200, 50, Label, Label1, ariallarge, c, GAME OVER
 
+r: 80, 120, 80, 30, Button, GameOverButton1
 r: 78, 127, 80, 20, Label, Label2, arial, c, Continue
-r: 80, 120, 80, 30, Button, Button1
 
+r: 240, 120, 80, 30, Button, GameOverButton2
 r: 238, 127, 80, 20, Label, Label3, arial, c, Quit
-r: 240, 120, 80, 30, Button, Button2

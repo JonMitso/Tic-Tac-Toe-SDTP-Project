@@ -1,5 +1,6 @@
 ﻿using System;
 using SwinGameSDK;
+using System.Collections.Generic;
 using Color = SwinGameSDK.Color;
 
 namespace MyGame
@@ -24,11 +25,12 @@ namespace MyGame
 			_height = height;
 			_x = x;
 			_y = y;
+			_selected = false;
 		}
 
 		public Square () : this (Color.Black, 25, 25, 25, 25)
 		{
-
+			
 		}
 
 		public Color Color
@@ -105,7 +107,7 @@ namespace MyGame
 
 		public bool IsAt (Point2D pt)
 		{
-			if (SwinGame.PointInRect (pt, _x, _y, _width, _height))
+			if (SwinGame.PointInRect (pt, X, Y, Width, Height))
 			{
 				return true;
 			}
@@ -121,9 +123,11 @@ namespace MyGame
 			_y = y;
 			_width = width;
 			_height = height;
-			SwinGame.FillRectangle (_color, x, y, width, height);
+			SwinGame.FillRectangle (Color, x, y, width, height);
 			if (Selected)
+			{
 				DrawCross ();
+			}
 		}
 
 		public void DrawCross ()

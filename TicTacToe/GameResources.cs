@@ -1,5 +1,6 @@
 ﻿using System;
 using SwinGameSDK;
+using System.Collections.Generic;
 
 namespace MyGame
 {
@@ -17,7 +18,7 @@ namespace MyGame
 
 		public static void LoadFonts ()
 		{
-			
+			SwinGame.LoadFontNamed ( "arial", "arial.ttf", 12 );
 		}
 
 		public static void LoadImages ()

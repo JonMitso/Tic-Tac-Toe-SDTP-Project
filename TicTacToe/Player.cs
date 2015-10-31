@@ -1,5 +1,6 @@
 ﻿using System;
 using SwinGameSDK;
+using System.Collections.Generic;
 
 namespace MyGame
 {
@@ -19,6 +20,10 @@ namespace MyGame
 			get
 			{
 				return _name;
+			}
+			set
+			{
+				_name = value;
 			}
 		}
 

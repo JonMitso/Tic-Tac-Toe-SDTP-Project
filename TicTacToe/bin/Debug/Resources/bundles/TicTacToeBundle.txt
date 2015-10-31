@@ -8,6 +8,8 @@ FONT,arial,arial.ttf,12
 FONT,ariallarge,arial.ttf,30
 
 // The actual panel
-PANEL,PlayerPanel,PlayerInputPanel.txt
+PANEL,PlayerInputPanel,PlayerInputPanel.txt
 
 PANEL,GameOverPanel,GameOverPanel.txt
+
+PANEL,PlayPanel,PlayPanel.txt

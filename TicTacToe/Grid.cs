@@ -32,19 +32,19 @@ namespace MyGame
 		/// </summary>
 		public void GridDraw ()
 		{
-			_squares [0].Draw (25, 25, WIDTH, HEIGHT);
-			_squares [1].Draw (202, 25, WIDTH, HEIGHT);
-			_squares [2].Draw (379, 25, WIDTH, HEIGHT);
-			_squares [3].Draw (25, 202, WIDTH, HEIGHT);
-			_squares [4].Draw (202, 202, WIDTH, HEIGHT);
-			_squares [5].Draw (379, 202, WIDTH, HEIGHT);
-			_squares [6].Draw (25, 379, WIDTH, HEIGHT);
-			_squares [7].Draw (202, 379, WIDTH, HEIGHT);
-			_squares [8].Draw (379, 379, WIDTH, HEIGHT);
+			_squares [0].Draw (25, 35, WIDTH, HEIGHT);
+			_squares [1].Draw (202, 35, WIDTH, HEIGHT);
+			_squares [2].Draw (379, 35, WIDTH, HEIGHT);
+			_squares [3].Draw (25, 212, WIDTH, HEIGHT);
+			_squares [4].Draw (202, 212, WIDTH, HEIGHT);
+			_squares [5].Draw (379, 212, WIDTH, HEIGHT);
+			_squares [6].Draw (25, 389, WIDTH, HEIGHT);
+			_squares [7].Draw (202, 389, WIDTH, HEIGHT);
+			_squares [8].Draw (379, 389, WIDTH, HEIGHT);
 		}
 
 		/// <summary>
-		/// Sets the boolean value _selected equal to true if the user clicks on a square
+		/// Sets the boolean value _selected equal to true
 		/// </summary>
 		/// <param name="pt">Point2D</param>
 		public void SelectSquareAt (Point2D pt)

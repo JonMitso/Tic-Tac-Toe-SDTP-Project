@@ -70,6 +70,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="MenuController.cs" />
     <Compile Include="Grid.cs" />
+    <Compile Include="TicTacToeGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

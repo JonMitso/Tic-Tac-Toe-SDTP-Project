@@ -1,5 +1,6 @@
 using System;
 using SwinGameSDK;
+using System.Collections.Generic;
 
 namespace MyGame
 {
@@ -7,45 +8,20 @@ namespace MyGame
     {
         public static void Main()
         {
+			//Load game resources
 			GameResources.LoadResources ();
+
             //Open the game window
             SwinGame.OpenGraphicsWindow("TicTacToe", 800, 600);
             //SwinGame.ShowSwinGameSplashScreen();
-			SwinGame.ClearScreen (Color.White);
 
-			SwinGame.ShowPanel ("GameOverPanel");
-
-			SwinGame.GUISetBackgroundColor (Color.White);
-			SwinGame.GUISetForegroundColor (Color.Black);
-
-
-			//GameResources.LoadResources();
-			//Grid grid = new Grid ();
             //Run the game loop
-            while(false == SwinGame.WindowCloseRequested())
+			do
             {
-                //Fetch the next batch of UI interaction
-                SwinGame.ProcessEvents();
-
-				SwinGame.DrawInterface ();
-				SwinGame.UpdateInterface ();
-
-                //Clear the screen and draw the framerate
-				//grid.GridDraw ();
-
-//				if (SwinGame.MouseClicked (MouseButton.LeftButton))
-//				{
-//					grid.SelectSquareAt (SwinGame.MousePosition ());
-//				}
-//
-//				if (SwinGame.MouseClicked (MouseButton.RightButton))
-//				{
-//					grid.Reset ();
-//				}
-                
-                //Draw onto the screen
-                SwinGame.RefreshScreen(60);
-            }
+				GameController.DrawScreen ();
+				GameController.HandleUserInput ();
+				SwinGame.RefreshScreen (60);
+			} while(!( SwinGame.WindowCloseRequested() == true | GameController.CurrentState == GameState.Quitting));
         }
     }
 }
