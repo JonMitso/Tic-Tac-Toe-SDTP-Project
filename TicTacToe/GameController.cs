@@ -14,9 +14,6 @@ namespace MyGame
 		private static Player _playerX;
 		private static Player _playerO;
 
-		// The winning player
-		private static Player _winningPlayer;
-
 		// The active player
 		private static Player _activePlayer;
 
@@ -30,11 +27,6 @@ namespace MyGame
 		// Remove from stack through pop()
 		private static Stack<GameState> _state = new Stack<GameState>();
 
-		//Keeps track of whos turn it is
-		//True means it's playerX's turn (cross)
-		//False means it's playerO's turn (naught)
-		private static bool _turnTracker;
-
 		/// <summary>
 		/// Initializes the GameController.
 		/// </summary>
@@ -43,9 +35,6 @@ namespace MyGame
 			_state.Push(GameState.Quitting);
 			_state.Push(GameState.InputState);
 			_grid = new Grid ();
-			_winningPlayer = new Player ("Player");
-			_activePlayer = new Player ("Player");
-			_turnTracker = true;
 		}
 
 		/// <summary>
@@ -72,6 +61,18 @@ namespace MyGame
 			}
 		}
 
+		public static Player ActivePlayer
+		{
+			get
+			{
+				return _activePlayer;
+			}
+			set
+			{
+				_activePlayer = value;
+			}
+		}
+
 		/// <summary>
 		/// Gets the current game state.
 		/// </summary>
@@ -81,19 +82,6 @@ namespace MyGame
 			get 
 			{ 
 				return _state.Peek(); 
-			}
-		}
-
-		public static bool TurnTracker 
-		{
-			get 
-			{ 
-				return _turnTracker; 
-			}
-
-			set
-			{
-				_turnTracker = value;
 			}
 		}
 
@@ -116,6 +104,7 @@ namespace MyGame
 			_grid.GridDraw ();
 
 			ScoreController.DrawScore ();
+
 			SwinGame.DrawTextOnScreen ( _activePlayer.Name + "'s Turn!", Color.Black, SwinGame.FontNamed( "arial" ), 570, 160);
 		}
 
@@ -127,7 +116,14 @@ namespace MyGame
 			SwinGame.ShowPanel ( "GameOverPanel" );
 			SwinGame.DrawInterface ();
 
-			SwinGame.DrawTextOnScreen ( _winningPlayer.Name + " wins!", Color.Black, SwinGame.FontNamed( "arial" ), ( ( SwinGame.ScreenWidth () / 2 ) - ( SwinGame.TextWidth ( SwinGame.FontNamed( "arial" ), _winningPlayer.Name + "wins!") / 2)), 270);
+			if ( _grid.CheckWinState () )
+			{
+				SwinGame.DrawTextOnScreen ( _activePlayer.Name + " wins!", Color.Black, SwinGame.FontNamed( "arial" ), ( ( SwinGame.ScreenWidth () / 2 ) - ( SwinGame.TextWidth ( SwinGame.FontNamed( "arial" ), _activePlayer.Name + "wins!") / 2)), 270);
+			}
+			else if (_grid.CheckFull () )
+			{
+				SwinGame.DrawTextOnScreen ( "It's a tie!", Color.Black, SwinGame.FontNamed( "arial" ), ( ( SwinGame.ScreenWidth () / 2 ) - ( SwinGame.TextWidth ( SwinGame.FontNamed( "arial" ), "It's a tie!") / 2)), 270);
+			}
 		}
 
 		/// <summary>
@@ -163,7 +159,7 @@ namespace MyGame
 		{
 			// Sets the X and O player names as per the input.
 			// Sets to default 'PlayerX' or 'PlayerO' if no input.
-			if ( SwinGame.ButtonClicked ( "InputButton1" ) )
+			if ( SwinGame.ButtonClicked ( "InputButton1" ))
 			{
 				if ( SwinGame.TextBoxText ( "PlayerXTextBox" ).TrimEnd () == "" )
 				{
@@ -185,6 +181,8 @@ namespace MyGame
 
 				SwinGame.HidePanel ( "PlayerInputPanel" );
 
+				_activePlayer = PlayerX;
+
 				GameController.SwitchState ( GameState.PlayState );
 			}
 		}
@@ -195,24 +193,20 @@ namespace MyGame
 		static void HandlePlayState ()
 		{
 			// Selects a square on the grid.
-			//Right-click = draw naught
-			if ( (SwinGame.MouseClicked ( MouseButton.LeftButton )) && TurnTracker )
+			if ( (SwinGame.MouseClicked ( MouseButton.LeftButton )) && _activePlayer == PlayerX )
 			{
-				_grid.SelectSquareAtLeft ( SwinGame.MousePosition() );
+				_grid.SelectSquareX ( SwinGame.MousePosition() );
 			}
-			//Left-click = draw cross
-			else if ( (SwinGame.MouseClicked (MouseButton.RightButton )) && !TurnTracker )
+			else if ( (SwinGame.MouseClicked (MouseButton.LeftButton )) && _activePlayer == PlayerO )
 			{
-				_grid.SelectSquareAtRight ( SwinGame.MousePosition() );
+				_grid.SelectSquareO ( SwinGame.MousePosition() );
 			}
 				
-			// Ends the game. (currently switches to end game state rather than quitting for testing purposes (see later comment))
+			// Ends the game.
 			if ( SwinGame.ButtonClicked ( "PlayButton1" ) )
 			{
 				SwinGame.HidePanel ( "PlayPanel" );
-
-				//EndingState as placeholder, set to Quitting in final product
-				GameController.SwitchState ( GameState.EndingState );
+				GameController.SwitchState ( GameState.Quitting );
 			}
 		}
 

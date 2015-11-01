@@ -51,7 +51,7 @@ namespace MyGame
 		/// Sets the boolean value _selected equal to true
 		/// </summary>
 		/// <param name="pt">Point2D</param>
-		public void SelectSquareAtLeft (Point2D pt)
+		public void SelectSquareX (Point2D pt)
 		{
 			foreach (Square s in _squares)
 			{
@@ -59,11 +59,24 @@ namespace MyGame
 				if (s.IsAt (pt))
 				{
 					//Only draw if the square is not selected
-					if (s.Selected == false)
+					if ( s.SelectedO == false && s.SelectedX == false )
 					{
-						s.Turn = true;
-						GameController.TurnTracker = false;
-						s.Selected = true;
+						s.SelectedX = true;
+
+						if ( CheckWinState () )
+						{
+							ScoreController.IncreasePlayerScore ( GameController.ActivePlayer );
+							GameController.SwitchState (GameState.EndingState);
+						}
+						else if ( CheckFull () )
+						{
+							ScoreController.TieValue += 1;
+							GameController.SwitchState (GameState.EndingState);
+						}
+						else
+						{
+							GameController.ActivePlayer = GameController.PlayerO;
+						}
 					}
 				}
 			}
@@ -73,7 +86,7 @@ namespace MyGame
 		/// Sets the boolean value _selected equal to true
 		/// </summary>
 		/// <param name="pt">Point.</param>
-		public void SelectSquareAtRight (Point2D pt)
+		public void SelectSquareO (Point2D pt)
 		{
 			foreach (Square s in _squares)
 			{
@@ -81,13 +94,112 @@ namespace MyGame
 				if (s.IsAt (pt))
 				{
 					//Only draw if the square is not selected
-					if (s.Selected == false)
+					if ( s.SelectedO == false && s.SelectedX == false )
 					{
-						s.Turn = false;
-						GameController.TurnTracker = true;
-						s.Selected = true;
+						s.SelectedO = true;
+
+						if ( CheckWinState () )
+						{
+							ScoreController.IncreasePlayerScore ( GameController.ActivePlayer );
+							GameController.SwitchState (GameState.EndingState);
+						}
+						else if ( CheckFull () )
+						{
+							ScoreController.TieValue += 1;
+							GameController.SwitchState (GameState.EndingState);
+						}
+						else
+						{
+							GameController.ActivePlayer = GameController.PlayerX;
+						}
 					}
 				}
+			}
+		}
+
+		public bool CheckWinState ()
+		{
+			if ( _squares[0].SelectedO && _squares[1].SelectedO && _squares[2].SelectedO )
+			{
+				return true;
+			} 
+			else if ( _squares[3].SelectedO && _squares[4].SelectedO && _squares[5].SelectedO )
+			{
+				return true;
+			}
+			else if ( _squares[6].SelectedO && _squares[7].SelectedO && _squares[8].SelectedO )
+			{
+				return true;
+			}
+			else if ( _squares[0].SelectedO && _squares[3].SelectedO && _squares[6].SelectedO )
+			{
+				return true;
+			}
+			else if ( _squares[1].SelectedO && _squares[4].SelectedO && _squares[7].SelectedO )
+			{
+				return true;
+			}
+			else if ( _squares[2].SelectedO && _squares[5].SelectedO && _squares[8].SelectedO )
+			{
+				return true;
+			}
+			else if ( _squares[0].SelectedO && _squares[4].SelectedO && _squares[8].SelectedO )
+			{
+				return true;
+			}
+			else if ( _squares[2].SelectedO && _squares[4].SelectedO && _squares[6].SelectedO )
+			{
+				return true;
+			}
+			else if ( _squares[0].SelectedX && _squares[1].SelectedX && _squares[2].SelectedX )
+			{
+				return true;
+			} 
+			else if ( _squares[3].SelectedX && _squares[4].SelectedX && _squares[5].SelectedX )
+			{
+				return true;
+			}
+			else if ( _squares[6].SelectedX && _squares[7].SelectedX && _squares[8].SelectedX )
+			{
+				return true;
+			}
+			else if ( _squares[0].SelectedX && _squares[3].SelectedX && _squares[6].SelectedX )
+			{
+				return true;
+			}
+			else if ( _squares[1].SelectedX && _squares[4].SelectedX && _squares[7].SelectedX )
+			{
+				return true;
+			}
+			else if ( _squares[2].SelectedX && _squares[5].SelectedX && _squares[8].SelectedX )
+			{
+				return true;
+			}
+			else if ( _squares[0].SelectedX && _squares[4].SelectedX && _squares[8].SelectedX )
+			{
+				return true;
+			}
+			else if ( _squares[2].SelectedX && _squares[4].SelectedX && _squares[6].SelectedX )
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		public bool CheckFull ()
+		{
+			if ( ( ( _squares [0].SelectedO ) || ( _squares [0].SelectedX ) ) && ( ( _squares [1].SelectedO ) || ( _squares [1].SelectedX ) ) && ( ( _squares [2].SelectedO ) || ( _squares [2].SelectedX ) ) &&
+				 ( ( _squares [3].SelectedO ) || ( _squares [3].SelectedX ) ) && ( ( _squares [4].SelectedO ) || ( _squares [4].SelectedX ) ) && ( ( _squares [5].SelectedO ) || ( _squares [5].SelectedX ) ) &&
+				 ( ( _squares [6].SelectedO ) || ( _squares [6].SelectedX ) ) && ( ( _squares [7].SelectedO ) || ( _squares [7].SelectedX ) ) && ( ( _squares [8].SelectedO ) || ( _squares [8].SelectedX ) ) )
+			{
+				return true;
+			}
+			else 
+			{
+				return false;
 			}
 		}
 
@@ -98,10 +210,8 @@ namespace MyGame
 		{
 			foreach (Square s in _squares)
 			{
-				s.Selected = false;
-
-				//Reset TurnTracker so playerX always has the first turn
-				GameController.TurnTracker = true;
+				s.SelectedX = false;
+				s.SelectedO = false;
 			}
 		}
 	}

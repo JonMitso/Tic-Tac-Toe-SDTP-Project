@@ -20,8 +20,8 @@ namespace MyGame
 		private int _width, _height;
 		private float _x, _y;
 		private Color _color;
-		private bool _selected;
-		private bool _turn;
+		private bool _selectedX;
+		private bool _selectedO;
 
 
 		/// <summary>
@@ -39,7 +39,8 @@ namespace MyGame
 			_height = height;
 			_x = x;
 			_y = y;
-			_selected = false;
+			_selectedX = false;
+			_selectedO = false;
 		}
 
 		/// <summary>
@@ -131,32 +132,37 @@ namespace MyGame
 		}
 
 		/// <summary>
-		/// Gets or sets a value indicating whether this Square is selected.
+		/// Gets or sets a value indicating whether this Square is selected as a cross.
 		/// </summary>
 		/// <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
-		public bool Selected
+		public bool SelectedX
 		{
 			get
 			{
-				return _selected;
+				return _selectedX;
 			}
 			set
 			{
-				_selected = value;
+				_selectedX = value;
 			}
 		}
 
-		public bool Turn
+		/// <summary>
+		/// Gets or sets a value indicating whether this Square is selected as a naught.
+		/// </summary>
+		/// <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
+		public bool SelectedO
 		{
 			get
 			{
-				return _turn;
+				return _selectedO;
 			}
 			set
 			{
-				_turn = value;
+				_selectedO = value;
 			}
 		}
+
 		/// <summary>
 		/// Determines whether this instance is at the specified point.
 		/// </summary>
@@ -189,12 +195,12 @@ namespace MyGame
 			_height = height;
 			SwinGame.FillRectangle (Color, x, y, width, height);
 
-			if ((Selected) && (_turn == true))
+			if (SelectedX)
 			{
 				DrawCross ();
 			}
 
-			else if ((Selected) && (_turn == false))
+			else if (SelectedO)
 			{
 				DrawNaught ();
 			}
