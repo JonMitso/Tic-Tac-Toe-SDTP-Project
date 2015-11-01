@@ -51,14 +51,42 @@ namespace MyGame
 		/// Sets the boolean value _selected equal to true
 		/// </summary>
 		/// <param name="pt">Point2D</param>
-		public void SelectSquareAt (Point2D pt)
+		public void SelectSquareAtLeft (Point2D pt)
 		{
 			foreach (Square s in _squares)
 			{
 				//Determines whether the position of the mouse pointer when the user clicks is inside a square, if it is set the _selected field to true
 				if (s.IsAt (pt))
 				{
-					s.Selected = true;
+					//Only draw if the square is not selected
+					if (s.Selected == false)
+					{
+						s.Turn = true;
+						GameController.TurnTracker = false;
+						s.Selected = true;
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the boolean value _selected equal to true
+		/// </summary>
+		/// <param name="pt">Point.</param>
+		public void SelectSquareAtRight (Point2D pt)
+		{
+			foreach (Square s in _squares)
+			{
+				//Determines whether the position of the mouse pointer when the user clicks is inside a square, if it is set the _selected field to true
+				if (s.IsAt (pt))
+				{
+					//Only draw if the square is not selected
+					if (s.Selected == false)
+					{
+						s.Turn = false;
+						GameController.TurnTracker = true;
+						s.Selected = true;
+					}
 				}
 			}
 		}
@@ -71,6 +99,9 @@ namespace MyGame
 			foreach (Square s in _squares)
 			{
 				s.Selected = false;
+
+				//Reset TurnTracker so playerX always has the first turn
+				GameController.TurnTracker = true;
 			}
 		}
 	}

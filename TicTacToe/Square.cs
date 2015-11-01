@@ -21,6 +21,8 @@ namespace MyGame
 		private float _x, _y;
 		private Color _color;
 		private bool _selected;
+		private bool _turn;
+
 
 		/// <summary>
 		/// Initializes a new Square.
@@ -144,6 +146,17 @@ namespace MyGame
 			}
 		}
 
+		public bool Turn
+		{
+			get
+			{
+				return _turn;
+			}
+			set
+			{
+				_turn = value;
+			}
+		}
 		/// <summary>
 		/// Determines whether this instance is at the specified point.
 		/// </summary>
@@ -175,9 +188,15 @@ namespace MyGame
 			_width = width;
 			_height = height;
 			SwinGame.FillRectangle (Color, x, y, width, height);
-			if (Selected)
+
+			if ((Selected) && (_turn == true))
 			{
 				DrawCross ();
+			}
+
+			else if ((Selected) && (_turn == false))
+			{
+				DrawNaught ();
 			}
 		}
 
@@ -199,4 +218,3 @@ namespace MyGame
 		}
 	}
 }
-

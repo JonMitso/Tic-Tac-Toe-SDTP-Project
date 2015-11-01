@@ -30,6 +30,11 @@ namespace MyGame
 		// Remove from stack through pop()
 		private static Stack<GameState> _state = new Stack<GameState>();
 
+		//Keeps track of whos turn it is
+		//True means it's playerX's turn (cross)
+		//False means it's playerO's turn (naught)
+		private static bool _turnTracker;
+
 		/// <summary>
 		/// Initializes the GameController.
 		/// </summary>
@@ -40,6 +45,7 @@ namespace MyGame
 			_grid = new Grid ();
 			_winningPlayer = new Player ("Player");
 			_activePlayer = new Player ("Player");
+			_turnTracker = true;
 		}
 
 		/// <summary>
@@ -75,6 +81,19 @@ namespace MyGame
 			get 
 			{ 
 				return _state.Peek(); 
+			}
+		}
+
+		public static bool TurnTracker 
+		{
+			get 
+			{ 
+				return _turnTracker; 
+			}
+
+			set
+			{
+				_turnTracker = value;
 			}
 		}
 
@@ -176,11 +195,17 @@ namespace MyGame
 		static void HandlePlayState ()
 		{
 			// Selects a square on the grid.
-			if ( SwinGame.MouseClicked ( MouseButton.LeftButton ) )
+			//Right-click = draw naught
+			if ( (SwinGame.MouseClicked ( MouseButton.LeftButton )) && TurnTracker )
 			{
-				_grid.SelectSquareAt ( SwinGame.MousePosition() );
+				_grid.SelectSquareAtLeft ( SwinGame.MousePosition() );
 			}
-
+			//Left-click = draw cross
+			else if ( (SwinGame.MouseClicked (MouseButton.RightButton )) && !TurnTracker )
+			{
+				_grid.SelectSquareAtRight ( SwinGame.MousePosition() );
+			}
+				
 			// Ends the game. (currently switches to end game state rather than quitting for testing purposes (see later comment))
 			if ( SwinGame.ButtonClicked ( "PlayButton1" ) )
 			{
@@ -265,4 +290,3 @@ namespace MyGame
 		}
 	}
 }
-
