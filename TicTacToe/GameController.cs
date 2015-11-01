@@ -195,13 +195,13 @@ namespace MyGame
 		static void HandlePlayState ()
 		{
 			// Selects a square on the grid.
-			//Right-click = draw naught
-			if ( (SwinGame.MouseClicked ( MouseButton.LeftButton )) && TurnTracker )
+			//Left-click = draw naught
+			if ( (SwinGame.MouseClicked ( MouseButton.LeftButton )) && (TurnTracker == true) )
 			{
 				_grid.SelectSquareAtLeft ( SwinGame.MousePosition() );
 			}
 			//Left-click = draw cross
-			else if ( (SwinGame.MouseClicked (MouseButton.RightButton )) && !TurnTracker )
+			else if ( (SwinGame.MouseClicked (MouseButton.LeftButton )) && (TurnTracker == false) )
 			{
 				_grid.SelectSquareAtRight ( SwinGame.MousePosition() );
 			}

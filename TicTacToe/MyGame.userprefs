@@ -1,13 +1,13 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="MyGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Square.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameMain.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="1" Column="1" />
-      <File FileName="GameController.cs" Line="203" Column="29" />
-      <File FileName="GameResources.cs" Line="1" Column="14" />
+      <File FileName="src\GameMain.cs" Line="16" Column="51" />
+      <File FileName="GameController.cs" Line="200" Column="5" />
+      <File FileName="GameResources.cs" Line="1" Column="1" />
       <File FileName="GameState.cs" Line="1" Column="1" />
-      <File FileName="Grid.cs" Line="90" Column="6" />
-      <File FileName="Square.cs" Line="179" Column="17" />
+      <File FileName="Grid.cs" Line="87" Column="23" />
+      <File FileName="Square.cs" Line="185" Column="4" />
       <File FileName="Player.cs" Line="1" Column="1" />
       <File FileName="ScoreController.cs" Line="1" Column="1" />
       <File FileName="MenuController.cs" Line="1" Column="1" />
