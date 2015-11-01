@@ -16,6 +16,9 @@ namespace MyGame
 		// Game interaction state.
 		PlayState,
 
+		//Display winning row
+		PostMatchState,
+
 		// End Game state. Continue or Quit.
 		EndingState,
 

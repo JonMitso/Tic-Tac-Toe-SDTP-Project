@@ -108,6 +108,18 @@ namespace MyGame
 			SwinGame.DrawTextOnScreen ( _activePlayer.Name + "'s Turn!", Color.Black, SwinGame.FontNamed( "arial" ), 570, 160);
 		}
 
+		public static void DrawPostMatch ()
+		{
+			SwinGame.ShowPanel ( "PlayPanel" );
+			SwinGame.DrawInterface ();
+			_grid.GridDraw ();
+
+			ScoreController.DrawScore ();
+
+			SwinGame.DrawTextOnScreen ( _activePlayer.Name + "'s Turn!", Color.Black, SwinGame.FontNamed( "arial" ), 570, 160);
+			SwinGame.DrawTextOnScreen ( "The game has ended!", Color.Black, SwinGame.FontNamed( "arial" ), 570, 300);
+		}
+
 		/// <summary>
 		/// Draws the end game state.
 		/// </summary>
@@ -143,6 +155,9 @@ namespace MyGame
 				break;
 			case GameState.PlayState:
 				DrawGame ();
+				break;
+			case GameState.PostMatchState:
+				DrawPostMatch ();
 				break;
 			case GameState.EndingState:
 				DrawEndOfGame();
@@ -209,6 +224,12 @@ namespace MyGame
 			}
 		}
 
+		static void HandlePostMatchState ()
+		{
+			SwinGame.Delay (3000);
+			GameController.SwitchState (GameState.EndingState);
+		}
+
 		/// <summary>
 		/// Handles the input during the endgame state.
 		/// </summary>
@@ -249,6 +270,9 @@ namespace MyGame
 				break;
 			case GameState.PlayState:
 				HandlePlayState ();
+				break;
+			case GameState.PostMatchState:
+				HandlePostMatchState();
 				break;
 			case GameState.EndingState:
 				HandleEndingState ();

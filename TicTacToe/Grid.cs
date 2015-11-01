@@ -1,6 +1,8 @@
 ﻿using System;
 using SwinGameSDK;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MyGame
 {
@@ -67,12 +69,12 @@ namespace MyGame
 						if ( CheckWinState () )
 						{
 							ScoreController.IncreasePlayerScore ( GameController.ActivePlayer );
-							GameController.SwitchState (GameState.EndingState);
+							GameController.SwitchState (GameState.PostMatchState);
 						}
 						else if ( CheckFull () )
 						{
 							ScoreController.TieValue += 1;
-							GameController.SwitchState (GameState.EndingState);
+							GameController.SwitchState (GameState.PostMatchState);
 						}
 						else
 						{
@@ -103,12 +105,12 @@ namespace MyGame
 						if ( CheckWinState () )
 						{
 							ScoreController.IncreasePlayerScore ( GameController.ActivePlayer );
-							GameController.SwitchState (GameState.EndingState);
+							GameController.SwitchState (GameState.PostMatchState);
 						}
 						else if ( CheckFull () )
 						{
 							ScoreController.TieValue += 1;
-							GameController.SwitchState (GameState.EndingState);
+							GameController.SwitchState (GameState.PostMatchState);
 						}
 						else
 						{
