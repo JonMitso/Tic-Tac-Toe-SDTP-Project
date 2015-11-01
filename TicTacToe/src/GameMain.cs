@@ -23,6 +23,8 @@ namespace MyGame
 				GameController.HandleUserInput ();
 				SwinGame.RefreshScreen (60);
 			} while( ! ( SwinGame.WindowCloseRequested() == true || GameController.CurrentState == GameState.Quitting || SwinGame.KeyTyped (KeyCode.vk_ESCAPE) || SwinGame.KeyTyped (KeyCode.vk_q) ));
+
+			GameResources.FreeResources ();
         }
     }
 }

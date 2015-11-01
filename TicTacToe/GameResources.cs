@@ -44,7 +44,8 @@ namespace MyGame
 		/// </summary>
 		public static void LoadSounds ()
 		{
-
+			SwinGame.LoadSoundEffectNamed ("X", "Blop-Mark_DiAngelo-79054334.wav");
+			SwinGame.LoadSoundEffectNamed ("O", "Tick-DeepFrozenApps-397275646.wav");
 		}
 
 		/// <summary>
@@ -52,6 +53,9 @@ namespace MyGame
 		/// </summary>
 		public static void LoadResources ()
 		{
+			LoadSounds ();
+			LoadImages ();
+			LoadFonts ();
 			LoadBundle ();
 		}
 
@@ -60,7 +64,7 @@ namespace MyGame
 		/// </summary>
 		private static void FreeFonts ()
 		{
-
+			SwinGame.FreeFont ( SwinGame.FontNamed ( "arial" ) );
 		}
 
 		/// <summary>
@@ -76,15 +80,18 @@ namespace MyGame
 		/// </summary>
 		private static void FreeSounds ()
 		{
-
+			SwinGame.FreeSoundEffect ( SwinGame.SoundEffectNamed ( "X" ) );
+			SwinGame.FreeSoundEffect ( SwinGame.SoundEffectNamed ( "O" ) );
 		}
 
 		/// <summary>
 		/// Frees all resources.
 		/// </summary>
-		private static void FreeResources ()
+		public static void FreeResources ()
 		{
-
+			FreeSounds ();
+			FreeImages ();
+			FreeFonts ();
 		}
 	}
 }

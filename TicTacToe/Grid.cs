@@ -61,6 +61,7 @@ namespace MyGame
 					//Only draw if the square is not selected
 					if ( s.SelectedO == false && s.SelectedX == false )
 					{
+						SwinGame.PlaySoundEffect ( SwinGame.SoundEffectNamed ( "X" ) );
 						s.SelectedX = true;
 
 						if ( CheckWinState () )
@@ -97,6 +98,7 @@ namespace MyGame
 					if ( s.SelectedO == false && s.SelectedX == false )
 					{
 						s.SelectedO = true;
+						SwinGame.PlaySoundEffect ( SwinGame.SoundEffectNamed ("O") );
 
 						if ( CheckWinState () )
 						{
