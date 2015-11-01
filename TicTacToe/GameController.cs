@@ -205,7 +205,6 @@ namespace MyGame
 			// Ends the game.
 			if ( SwinGame.ButtonClicked ( "PlayButton1" ) )
 			{
-				SwinGame.HidePanel ( "PlayPanel" );
 				GameController.SwitchState ( GameState.Quitting );
 			}
 		}
@@ -215,6 +214,7 @@ namespace MyGame
 		/// </summary>
 		static void HandleEndingState ()
 		{
+			SwinGame.HidePanel ( "PlayPanel" );
 			// Restarts the game.
 			// Retains player info and score.
 			// Resets the grid.
