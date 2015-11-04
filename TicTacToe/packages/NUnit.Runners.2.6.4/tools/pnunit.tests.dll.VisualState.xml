@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1010]E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\packages\NUnit.Runners.2.6.4\tools\pnunit.tests.dll</TopNode>
+  <SelectedNode>[0-1003]TestLibraries.ParallelExampleWithBarriers</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1010]E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\packages\NUnit.Runners.2.6.4\tools\pnunit.tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1011]TestLibraries" Expanded="true" />
+    <Node UniqueName="[0-1000]TestLibraries.ParallelExample" Expanded="true" />
+    <Node UniqueName="[0-1003]TestLibraries.ParallelExampleWithBarriers" Expanded="true" />
+    <Node UniqueName="[0-1006]TestLibraries.Testing" Expanded="true" />
+  </Nodes>
+</VisualState>
