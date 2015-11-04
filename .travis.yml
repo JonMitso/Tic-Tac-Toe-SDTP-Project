@@ -3,7 +3,7 @@ solution: ./TicTacToe/MyGame.sln
 
 install:
   - nuget restore ./TicTacToe/MyGame.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OuputDirectory testrunner
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 
 script:
   - xbuild ./TicTacToe/MyGame.sln
