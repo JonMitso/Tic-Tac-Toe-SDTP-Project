@@ -207,6 +207,14 @@ namespace MyGame
 			}
 		}
 
+		public List<Square> Squares
+		{
+			get
+			{
+				return _squares;
+			}
+		}
+
 		/// <summary>
 		/// Reset the grid to default state.
 		/// </summary>

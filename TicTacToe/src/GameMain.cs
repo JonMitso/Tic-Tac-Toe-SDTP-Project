@@ -22,7 +22,7 @@ namespace MyGame
 				GameController.DrawScreen ();
 				GameController.HandleUserInput ();
 				SwinGame.RefreshScreen (60);
-			} while( ! ( SwinGame.WindowCloseRequested() == true || GameController.CurrentState == GameState.Quitting || SwinGame.KeyTyped (KeyCode.vk_ESCAPE) || SwinGame.KeyTyped (KeyCode.vk_q) ));
+			} while( ! ( SwinGame.WindowCloseRequested() == true || GameController.CurrentState == GameState.Quitting || SwinGame.KeyTyped (KeyCode.vk_ESCAPE) ));
 
 			GameResources.FreeResources ();
         }
