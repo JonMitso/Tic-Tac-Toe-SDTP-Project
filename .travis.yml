@@ -7,4 +7,4 @@ install:
 
 script:
   - xbuild ./TicTacToe/MyGame.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TicTacToe/bin/Debug/MyGame.exe
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console-x86.exe ./TicTacToe/bin/Debug/MyGame.exe
