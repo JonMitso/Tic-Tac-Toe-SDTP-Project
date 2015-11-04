@@ -1,7 +1,7 @@
 language: csharp
 solution: ./TicTacToe/MyGame.sln
 script:
-  - xbuild /p:Configuration=Debug ./TicTacToe/MyGame.sln
+  - xbuild ./TicTacToe/MyGame.sln
 before_install:
   - sudo apt-get install nunit-console
 
