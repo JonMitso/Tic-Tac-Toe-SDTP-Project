@@ -19,7 +19,7 @@ namespace TicTacToe.Tests
 			Assert.IsTrue ( _grid.Squares[4].IsAt ( SwinGame.PointAt ( 230, 230 )) );
 			Assert.IsFalse ( _grid.Squares[4].IsAt ( SwinGame.PointAt ( 200, 100 )) );
 
-			Assert.IsTrue ( _grid.Squares[4].SelectedO == false );
+			Assert.IsTrue ( _grid.Squares[4].SelectedO == true );
 			Assert.IsTrue ( _grid.Squares[4].SelectedX == false );
 		}
 
