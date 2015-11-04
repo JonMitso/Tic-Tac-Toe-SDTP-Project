@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\MyGame.exe" total="3" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-11-04" time="20:38:48">
+<test-results name="E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\MyGame.exe" total="3" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-11-04" time="20:51:57">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\packages\NUnit.Runners.2.6.4\tools" machine-name="JARROD-PC" user="Jarrod" user-domain="Jarrod-PC" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\MyGame.exe" executed="True" result="Success" success="True" time="0.225" asserts="0">
+  <test-suite type="Assembly" name="E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\MyGame.exe" executed="True" result="Success" success="True" time="0.223" asserts="0">
     <results>
-      <test-suite type="Namespace" name="MyGame" executed="True" result="Success" success="True" time="0.221" asserts="0">
+      <test-suite type="Namespace" name="MyGame" executed="True" result="Success" success="True" time="0.218" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="GridTests" executed="True" result="Success" success="True" time="0.220" asserts="0">
+          <test-suite type="TestFixture" name="GridTests" executed="True" result="Success" success="True" time="0.218" asserts="0">
             <results>
               <test-case name="MyGame.GridTests.TestFullGrid" executed="True" result="Success" success="True" time="0.062" asserts="2" />
               <test-case name="MyGame.GridTests.TestPopulateGrid" executed="True" result="Success" success="True" time="0.002" asserts="4" />
-              <test-case name="MyGame.GridTests.TestWinGrid" executed="True" result="Success" success="True" time="0.143" asserts="3" />
+              <test-case name="MyGame.GridTests.TestWinGrid" executed="True" result="Success" success="True" time="0.141" asserts="3" />
             </results>
           </test-suite>
         </results>
