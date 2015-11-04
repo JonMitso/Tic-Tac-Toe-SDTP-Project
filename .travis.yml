@@ -2,7 +2,6 @@ language: csharp
 solution: ./TicTacToe/MyGame.sln
 install:
   - nuget restore ./TicTacToe/MyGame.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild ./TicTacToe/MyGame.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TicTacToe/TicTacToe.Tests/bin/Debug/TicTacToe.Tests.dll
+  - mono ./TicTacToe/TicTacToe.Tests/packages/NUnit.Runners.2.6.4/tools/nunit-x86.exe ./TicTacToe/TicTacToe.Tests/bin/Debug/TicTacToe.Tests.dll
