@@ -1,15 +1,10 @@
-language: objective-c
+language: csharp
+solution: ./TicTacToe/MyGame.sln
 
-env:
- global:
-  - EnableNuGetPackageRestore=true 
- matrix:
-  - MONO_VERSION="3.8.0"
-
-before_install:
- - wget "http://download.mono-project.com/archive/${MONO_VERSION}/macos-10-x86/MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.pkg"
- - sudo installer -pkg "MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.pkg" -target /
+install:
+  - sudo apt-get install nunit-console
+  - nuget restore ./TicTacToe/MyGame.sln
 
 script:
- - xbuild 
- - nunit.sh Tests/bin/Debug/Tests.dll
+  - xbuild ./TicTacToe/MyGame.sln
+  - nunit-console ./TicTacToe/MyGame.Tests/bin/Debug/MyGame.Tests.dll

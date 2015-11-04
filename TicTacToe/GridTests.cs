@@ -3,7 +3,7 @@ using System;
 using SwinGameSDK;
 using System.Collections.Generic;
 
-namespace MyGame
+namespace MyGame.Tests
 {
 	[TestFixture ()]
 	public class GridTests
