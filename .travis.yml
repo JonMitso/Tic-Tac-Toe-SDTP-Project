@@ -1,8 +1,15 @@
-language: csharp
-solution: TicTacToe/MyGame.sln
-install:
-  - nuget restore TicTacToe/MyGame.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+language: objective-c
+
+env:
+ global:
+  - EnableNuGetPackageRestore=true 
+ matrix:
+  - MONO_VERSION="3.8.0"
+
+before_install:
+ - wget "http://download.mono-project.com/archive/${MONO_VERSION}/macos-10-x86/MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.pkg"
+ - sudo installer -pkg "MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.pkg" -target /
+
 script:
-  - xbuild /p:Configuration=Release TicTacToe/MyGame.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./MyPoject.Tests/bin/Release/MyProject.Tests.dll
+ - xbuild 
+ - nunit.sh Tests/bin/Debug/Tests.dll
