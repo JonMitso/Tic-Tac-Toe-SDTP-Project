@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
   <TopNode>[0-1010]E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\packages\NUnit.Runners.2.6.4\tools\pnunit.tests.dll</TopNode>
-  <SelectedNode>[0-1003]TestLibraries.ParallelExampleWithBarriers</SelectedNode>
+  <SelectedNode>[0-1004]TestLibraries.ParallelExampleWithBarriers.ParallelTestWithBarriersA</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1010]E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\packages\NUnit.Runners.2.6.4\tools\pnunit.tests.dll" Expanded="true" />
