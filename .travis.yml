@@ -1,10 +1,12 @@
 language: csharp
 solution: ./TicTacToe/MyGame.sln
-
-install:
-  - nuget restore ./TicTacToe/MyGame.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
-
 script:
-  - xbuild ./TicTacToe/MyGame.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TicTacToe/bin/Debug/MyGame.exe
+  - xbuild /p:Configuration=Debug ./TicTacToe/MyGame.sln
+before_install:
+  - sudo apt-get install nunit-console
+
+before_script:
+  - nuget restore ./TicTacToe/MyGame.sln
+
+after_script:
+  - nunit-console ./TicTacToe/bin/Release/MyGame.dll
