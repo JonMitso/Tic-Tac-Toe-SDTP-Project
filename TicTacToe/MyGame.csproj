@@ -57,6 +57,7 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="Resources\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\GameMain.cs" />
@@ -162,6 +163,15 @@
     <WinLibraryFiles Include="lib\win\swingame.rc" />
     <WinLibraryFiles Include="lib\win\zlib1.dll" />
     <None Include="packages.config" />
+    <None Include="obj\x86\Debug-Mac\MyGame.csproj.FileListAbsolute.txt" />
+    <None Include="obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug-Mac\MyGame.exe" />
+    <None Include="obj\x86\Debug-Mac\MyGame.pdb" />
+    <None Include="obj\x86\Debug-Unix\MyGame.csproj.FileListAbsolute.txt" />
+    <None Include="obj\x86\Debug-Unix\MyGame.exe" />
+    <None Include="obj\x86\Debug-Windows\MyGame.csproj.FileListAbsolute.txt" />
+    <None Include="obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug-Windows\MyGame.exe" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
