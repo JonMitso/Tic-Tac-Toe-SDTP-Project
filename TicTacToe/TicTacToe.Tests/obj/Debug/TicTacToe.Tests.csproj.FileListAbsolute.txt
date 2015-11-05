@@ -1,6 +1,5 @@
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\TicTacToe.Tests\bin\Debug\TicTacToe.Tests.dll
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\TicTacToe.Tests\bin\Debug\TicTacToe.Tests.pdb
-E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\TicTacToe.Tests\bin\Debug\nunit.framework.dll
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\TicTacToe.Tests\bin\Debug\nunit.framework.xml
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.csprojResolveAssemblyReference.cache
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.dll

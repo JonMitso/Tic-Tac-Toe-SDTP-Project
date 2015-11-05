@@ -39,9 +39,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -58,7 +55,6 @@
     <None Include="lib\SwinGame.dll.mdb" />
     <None Include="lib\sdl13\.DS_Store" />
     <None Include="lib\sdl13\libSGSDK.dylib" />
-    <None Include="lib\sdl13\mac\.DS_Store" />
     <None Include="lib\win\.DS_Store" />
     <None Include="lib\win\jpeg.dll" />
     <None Include="lib\win\libfreetype-6.dll" />
@@ -106,29 +102,78 @@
     <None Include="Resources\sounds\error.wav" />
     <None Include="Resources\sounds\SwinGameStart.wav" />
     <None Include="Resources\sounds\Tick-DeepFrozenApps-397275646.mp3" />
-    <None Include="lib\godly\.DS_Store" />
-    <None Include="lib\godly\libSGSDK.dylib" />
-    <None Include="lib\godly\mac\.DS_Store" />
-    <None Include="lib\mac\.DS_Store" />
-    <None Include="lib\mac\libSGSDK.dylib" />
     <None Include="obj\Debug\TicTacToe.Tests.csproj.FileListAbsolute.txt" />
     <None Include="obj\Debug\TicTacToe.Tests.csprojResolveAssemblyReference.cache" />
     <None Include="obj\Debug\TicTacToe.Tests.dll" />
     <None Include="obj\Debug\TicTacToe.Tests.pdb" />
-    <None Include="obj\x86\Debug-Mac\MyGame.csproj.FileListAbsolute.txt" />
-    <None Include="obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache" />
-    <None Include="obj\x86\Debug-Mac\MyGame.exe" />
-    <None Include="obj\x86\Debug-Mac\MyGame.pdb" />
-    <None Include="obj\x86\Debug-Unix\MyGame.csproj.FileListAbsolute.txt" />
-    <None Include="obj\x86\Debug-Unix\MyGame.exe" />
     <None Include="obj\x86\Debug-Windows\MyGame.csproj.FileListAbsolute.txt" />
     <None Include="obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache" />
     <None Include="obj\x86\Debug-Windows\MyGame.exe" />
+    <None Include="bin\Debug\jpeg.dll" />
+    <None Include="bin\Debug\libfreetype-6.dll" />
+    <None Include="bin\Debug\libogg-0.dll" />
+    <None Include="bin\Debug\libpng12-0.dll" />
+    <None Include="bin\Debug\libpng13.dll" />
+    <None Include="bin\Debug\libSGSDK.dylib" />
+    <None Include="bin\Debug\libtiff-3.dll" />
+    <None Include="bin\Debug\libvorbis-0.dll" />
+    <None Include="bin\Debug\libvorbisfile-3.dll" />
+    <None Include="bin\Debug\mikmod.dll" />
+    <None Include="bin\Debug\MyGame.exe" />
+    <None Include="bin\Debug\MyGame.exe.VisualState.xml" />
+    <None Include="bin\Debug\MyGame.pdb" />
+    <None Include="bin\Debug\nunit.framework.dll" />
+    <None Include="bin\Debug\nunit.framework.dll.VisualState.xml" />
+    <None Include="bin\Debug\nunit.framework.xml" />
+    <None Include="bin\Debug\ogg.dll" />
+    <None Include="bin\Debug\SDL.dll" />
+    <None Include="bin\Debug\SDL_gfx.dll" />
+    <None Include="bin\Debug\SDL_image.dll" />
+    <None Include="bin\Debug\SDL_mixer.dll" />
+    <None Include="bin\Debug\SDL_net.dll" />
+    <None Include="bin\Debug\SDL_ttf.dll" />
+    <None Include="bin\Debug\SGSDK.dll" />
+    <None Include="bin\Debug\smpeg.dll" />
+    <None Include="bin\Debug\SwinGame.dll" />
+    <None Include="bin\Debug\SwinGame.dll.VisualState.xml" />
+    <None Include="bin\Debug\swingame.rc" />
+    <None Include="bin\Debug\TestResult.xml" />
+    <None Include="bin\Debug\TicTacToe.Tests.dll" />
+    <None Include="bin\Debug\TicTacToe.Tests.dll.VisualState.xml" />
+    <None Include="bin\Debug\TicTacToe.Tests.pdb" />
+    <None Include="bin\Debug\zlib1.dll" />
+    <None Include="bin\Debug\Resources\SwinGame.icns" />
+    <None Include="bin\Debug\Resources\SwinGame.ico" />
+    <None Include="bin\Debug\Resources\animations\startup.txt" />
+    <None Include="bin\Debug\Resources\bundles\FileDialog.txt" />
+    <None Include="bin\Debug\Resources\bundles\splash.txt" />
+    <None Include="bin\Debug\Resources\bundles\TicTacToeBundle.txt" />
+    <None Include="bin\Debug\Resources\fonts\arial.ttf" />
+    <None Include="bin\Debug\Resources\fonts\cour.ttf" />
+    <None Include="bin\Debug\Resources\fonts\maven_pro_regular.ttf" />
+    <None Include="bin\Debug\Resources\images\fdFile.png" />
+    <None Include="bin\Debug\Resources\images\fdFolder.png" />
+    <None Include="bin\Debug\Resources\images\FileDialog_Active.png" />
+    <None Include="bin\Debug\Resources\images\FileDialog_Background.png" />
+    <None Include="bin\Debug\Resources\images\FileDialog_Inactive.png" />
+    <None Include="bin\Debug\Resources\images\FileDialog_Scroll.png" />
+    <None Include="bin\Debug\Resources\images\FileDialog_ScrollSmall.png" />
+    <None Include="bin\Debug\Resources\images\Swinburne.jpg" />
+    <None Include="bin\Debug\Resources\images\SwinGameAni.png" />
+    <None Include="bin\Debug\Resources\panels\FileDialog.txt" />
+    <None Include="bin\Debug\Resources\panels\GameOverPanel.txt" />
+    <None Include="bin\Debug\Resources\panels\PlayerInputPanel.txt" />
+    <None Include="bin\Debug\Resources\panels\PlayPanel.txt" />
+    <None Include="bin\Debug\Resources\sounds\Blop-Mark_DiAngelo-79054334.wav" />
+    <None Include="bin\Debug\Resources\sounds\error.wav" />
+    <None Include="bin\Debug\Resources\sounds\SwinGameStart.wav" />
+    <None Include="bin\Debug\Resources\sounds\Tick-DeepFrozenApps-397275646.wav" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
     <Folder Include="Resources\" />
     <Folder Include="packages\" />
     <Folder Include="obj\" />
+    <Folder Include="bin\" />
   </ItemGroup>
 </Project>

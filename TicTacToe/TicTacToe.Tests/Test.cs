@@ -12,7 +12,6 @@ namespace TicTacToe.Tests
 		[Test ()]
 		public void TestPopulateGrid ()
 		{
-
 			Grid _grid = new Grid ();
 			_grid.GridDraw ();
 
