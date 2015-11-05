@@ -39,6 +39,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -168,6 +171,12 @@
     <None Include="bin\Debug\Resources\sounds\error.wav" />
     <None Include="bin\Debug\Resources\sounds\SwinGameStart.wav" />
     <None Include="bin\Debug\Resources\sounds\Tick-DeepFrozenApps-397275646.wav" />
+    <None Include="obj\x86\Debug-Mac\MyGame.csproj.FileListAbsolute.txt" />
+    <None Include="obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug-Mac\MyGame.exe" />
+    <None Include="obj\x86\Debug-Mac\MyGame.pdb" />
+    <None Include="obj\x86\Debug-Unix\MyGame.csproj.FileListAbsolute.txt" />
+    <None Include="obj\x86\Debug-Unix\MyGame.exe" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
