@@ -121,7 +121,12 @@ namespace MyGame
 			}
 		}
 
-		public bool CheckWinState ()
+
+		/// <summary>
+		/// Checks against all possible win conditions for each player and returns true if the game has detected that a player has won
+		/// </summary>
+		/// <returns><c>true</c>, if window state was checked, <c>false</c> otherwise.</returns>
+		public bool CheckWinState () //To win in Tic-Tac-Toe there must be three consecutive naughts or crosses vertically, horizontally or diagonally on the 3x3 grid
 		{
 			if ( _squares[0].SelectedO && _squares[1].SelectedO && _squares[2].SelectedO )
 			{
@@ -193,6 +198,10 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Checks if every square is selected by either Player0 or PlayerX, if so return true indicating a draw.
+		/// </summary>
+		/// <returns><c>true</c>, if full was checked, <c>false</c> otherwise.</returns>
 		public bool CheckFull ()
 		{
 			if ( ( ( _squares [0].SelectedO ) || ( _squares [0].SelectedX ) ) && ( ( _squares [1].SelectedO ) || ( _squares [1].SelectedX ) ) && ( ( _squares [2].SelectedO ) || ( _squares [2].SelectedX ) ) &&

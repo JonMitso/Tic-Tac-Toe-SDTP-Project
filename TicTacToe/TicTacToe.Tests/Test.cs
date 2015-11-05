@@ -59,6 +59,11 @@ namespace TicTacToe.Tests
 
 			Assert.IsTrue ( _grid.CheckFull () );
 		}
+
+		[Test ()]
+		public void TestNameInput()
+		{
+
+		}
 	}
 }
-
