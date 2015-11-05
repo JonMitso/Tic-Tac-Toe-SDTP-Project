@@ -4,5 +4,5 @@ install:
   - nuget restore ./TicTacToe/MyGame.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release solution-name.sln
+  - xbuild ./TicTacToe/MyGame.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console-x86.exe ./TicTacToe/TicTacToe.Tests/bin/Debug/TicTacToe.Tests.dll
