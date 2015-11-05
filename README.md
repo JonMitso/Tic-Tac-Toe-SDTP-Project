@@ -6,8 +6,9 @@ The classic paper-and-pencil game of naughts and crosses developed to be played 
 - Utilises the SwinGameSDK library.
 - Incorporates Nunit's testing functionality.
 - Github used for version control.
+- Developed using agile practices.
 - Builds tracked by Snap CI: https://snap-ci.com/JonMitso/Tic-Tac-Toe-SDTP-Project/branch/master
-- Trello, Slack and Toggl were also used by the team for communication and project management purposes.
+- Trello, Slack, Dropbox and Toggl were also used by the team for communication and project management purposes.
 
 <strong>Gameplay features</strong>
 - 2 Player (Human vs Human)
