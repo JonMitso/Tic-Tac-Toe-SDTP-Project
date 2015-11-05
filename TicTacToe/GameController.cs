@@ -103,6 +103,7 @@ namespace MyGame
 			SwinGame.DrawInterface ();
 			_grid.GridDraw ();
 
+			//Draw each players wins to the screen
 			ScoreController.DrawScore ();
 
 			SwinGame.DrawTextOnScreen ( _activePlayer.Name + "'s Turn!", Color.Black, SwinGame.FontNamed( "arial" ), 570, 160);
