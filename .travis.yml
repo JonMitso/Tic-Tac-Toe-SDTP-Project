@@ -1,5 +1,7 @@
 language: csharp
 solution: ./TicTacToe/MyGame.sln
+os:
+  - windows
 install:
   - nuget restore ./TicTacToe/MyGame.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
