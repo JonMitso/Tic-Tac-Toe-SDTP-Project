@@ -2,7 +2,7 @@
 The classic paper-and-pencil game of naughts and crosses developed to be played on the computer with 2D-graphics!
 
 <strong>Tools and practices</strong>
-- Developed using Xamarin Studio in C#.
+- Developed in C# using Xamarin Studio.
 - Utilises the SwinGameSDK library.
 - Incorporates Nunit's testing functionality.
 - Github used for version control.
