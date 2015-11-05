@@ -11,7 +11,7 @@ The classic paper-and-pencil game of naughts and crosses developed to be played 
 - Trello, Slack, Dropbox and Toggl were also used by the team for communication and project management purposes.
 
 <strong>Gameplay features</strong>
-- 2 Player (Human vs Human)
+- 2-Player game (Human vs Human)
 - Player name customisation
 - Scoreboard display
 - Unique sound effects for each Player!
