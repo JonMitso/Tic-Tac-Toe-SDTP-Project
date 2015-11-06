@@ -1,14 +1,8 @@
 ﻿<Properties StartupItem="TicTacToe.Tests.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TicTacToe.Tests.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Test.cs">
     <Files>
-      <File FileName="..\src\GameMain.cs" Line="12" Column="35" />
-      <File FileName="Test.cs" Line="12" Column="12" />
-      <File FileName="..\GameController.cs" Line="1" Column="1" />
-      <File FileName="..\Grid.cs" Line="1" Column="1" />
-      <File FileName="..\Player.cs" Line="1" Column="1" />
-      <File FileName="..\Square.cs" Line="1" Column="1" />
-      <File FileName="TicTacToe.Tests.csproj" Line="24" Column="38" />
+      <File FileName="Test.cs" Line="20" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

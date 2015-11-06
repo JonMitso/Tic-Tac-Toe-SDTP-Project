@@ -76,6 +76,5 @@ E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\MyGame.pdb
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\nunit.framework.dll
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\SwinGame.dll
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\bin\Debug\nunit.framework.xml
-E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\obj\x86\Debug-Mac\MyGame.exe
 E:\Jarrod\Desktop\Tic-Tac-Toe-SDTP-Project\TicTacToe\obj\x86\Debug-Mac\MyGame.pdb

@@ -3,10 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EEE563A4-1AFC-4DEA-BF6B-327F5E09D838}</ProjectGuid>
+    <ProjectGuid>{C5067B3C-A15E-4604-9291-79502C7AE298}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>TicTacToe.Tests</RootNamespace>
     <AssemblyName>TicTacToe.Tests</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -17,137 +19,36 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+    <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DebugSymbols>true</DebugSymbols>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="SwinGame">
-      <HintPath>..\lib\SwinGame.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing" />
     <Reference Include="nunit.framework">
       <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SwinGame">
+      <HintPath>lib\SwinGame.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyGame.csproj">
       <Project>{871B5A90-103A-46A5-BBB9-07C02B9851D1}</Project>
       <Name>MyGame</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\animations\startup.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\bundles\FileDialog.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\bundles\splash.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\fonts\arial.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\fonts\cour.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\fonts\maven_pro_regular.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\fdFile.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\fdFolder.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\FileDialog_Active.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\FileDialog_Background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\FileDialog_Inactive.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\FileDialog_Scroll.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\FileDialog_ScrollSmall.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\Swinburne.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\SwinGameAni.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\panels\FileDialog.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\sounds\error.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\sounds\SwinGameStart.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\SwinGame.icns">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\SwinGame.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <MacLibraryFiles Include="lib\sdl13\libSGSDK.dylib" />
-    <WinLibraryFiles Include="lib\win\jpeg.dll" />
-    <WinLibraryFiles Include="lib\win\libfreetype-6.dll" />
-    <WinLibraryFiles Include="lib\win\libogg-0.dll" />
-    <WinLibraryFiles Include="lib\win\libpng12-0.dll" />
-    <WinLibraryFiles Include="lib\win\libpng13.dll" />
-    <WinLibraryFiles Include="lib\win\libtiff-3.dll" />
-    <WinLibraryFiles Include="lib\win\libvorbis-0.dll" />
-    <WinLibraryFiles Include="lib\win\libvorbisfile-3.dll" />
-    <WinLibraryFiles Include="lib\win\mikmod.dll" />
-    <WinLibraryFiles Include="lib\win\ogg.dll" />
-    <WinLibraryFiles Include="lib\win\SDL.dll" />
-    <WinLibraryFiles Include="lib\win\SDL_gfx.dll" />
-    <WinLibraryFiles Include="lib\win\SDL_image.dll" />
-    <WinLibraryFiles Include="lib\win\SDL_mixer.dll" />
-    <WinLibraryFiles Include="lib\win\SDL_net.dll" />
-    <WinLibraryFiles Include="lib\win\SDL_ttf.dll" />
-    <WinLibraryFiles Include="lib\win\SGSDK.dll" />
-    <WinLibraryFiles Include="lib\win\smpeg.dll" />
-    <WinLibraryFiles Include="lib\win\swingame.rc" />
-    <WinLibraryFiles Include="lib\win\zlib1.dll" />
-    <None Include="packages.config" />
-    <None Include="obj\x86\Debug-Mac\MyGame.csproj.FileListAbsolute.txt" />
-    <None Include="obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache" />
-    <None Include="obj\x86\Debug-Mac\MyGame.exe" />
-    <None Include="obj\x86\Debug-Mac\MyGame.pdb" />
-    <None Include="obj\x86\Debug-Unix\MyGame.csproj.FileListAbsolute.txt" />
-    <None Include="obj\x86\Debug-Unix\MyGame.exe" />
-    <None Include="obj\x86\Debug-Windows\MyGame.csproj.FileListAbsolute.txt" />
-    <None Include="obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache" />
-    <None Include="obj\x86\Debug-Windows\MyGame.exe" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="lib\" />
-    <Folder Include="Resources\" />
-    <Folder Include="packages\" />
-    <Folder Include="obj\" />
-    <Folder Include="bin\" />
   </ItemGroup>
 </Project>

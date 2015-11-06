@@ -1,16 +1,15 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="MyGame.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyGame.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TicTacToe.Tests\Test.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="19" Column="6" />
-      <File FileName="GameController.cs" Line="1" Column="1" />
+      <File FileName="GameController.cs" Line="10" Column="2" />
       <File FileName="GameResources.cs" Line="1" Column="1" />
       <File FileName="GameState.cs" Line="1" Column="1" />
       <File FileName="Grid.cs" Line="1" Column="1" />
       <File FileName="Square.cs" Line="1" Column="1" />
       <File FileName="Player.cs" Line="1" Column="1" />
       <File FileName="ScoreController.cs" Line="1" Column="1" />
-      <File FileName="MyGame.csproj" Line="1" Column="1" />
+      <File FileName="TicTacToe.Tests\Test.cs" Line="15" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
