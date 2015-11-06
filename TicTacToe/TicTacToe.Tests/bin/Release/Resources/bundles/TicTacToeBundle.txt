@@ -1,0 +1,15 @@
+// 32x32 images for files and folders
+// BITMAP,fdFile,fdFile.png
+// BITMAP,fdFolder,fdFolder.png
+
+// Font for text in dialog
+FONT,arial,arial.ttf,12
+
+FONT,ariallarge,arial.ttf,30
+
+// The actual panel
+PANEL,PlayerInputPanel,PlayerInputPanel.txt
+
+PANEL,GameOverPanel,GameOverPanel.txt
+
+PANEL,PlayPanel,PlayPanel.txt
