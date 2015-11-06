@@ -55,9 +55,14 @@
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'asd|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\asd</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
