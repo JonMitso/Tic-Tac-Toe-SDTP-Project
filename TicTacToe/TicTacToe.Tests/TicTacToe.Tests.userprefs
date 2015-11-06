@@ -1,5 +1,5 @@
 ﻿<Properties StartupItem="TicTacToe.Tests.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Test.cs">
     <Files>
       <File FileName="Test.cs" Line="13" Column="34" />
