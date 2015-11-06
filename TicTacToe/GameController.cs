@@ -61,6 +61,10 @@ namespace MyGame
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the active player.
+		/// </summary>
+		/// <value>The active player.</value>
 		public static Player ActivePlayer
 		{
 			get

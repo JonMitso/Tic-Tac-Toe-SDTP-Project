@@ -13,8 +13,7 @@ namespace MyGame
 
             // Open the game window
             SwinGame.OpenGraphicsWindow("TicTacToe", 800, 600);
-            //SwinGame.ShowSwinGameSplashScreen();
-			// Commented out splash screen for testing purposes
+            SwinGame.ShowSwinGameSplashScreen();
 
             // Run the game loop until window is closed or the game state switches to quitting
 			do
