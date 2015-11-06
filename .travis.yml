@@ -4,4 +4,4 @@ install:
   - nuget restore ./TicTacToe/MyGame.sln
 script:
   - xbuild ./TicTacToe/MyGame.sln
-  - mono ./TicTacToe/TicTacToe.Tests/packages/NUnit.Runners.2.6.4/tools/nunit-console-x86.exe ./TicTacToe/TicTacToe.Tests/bin/Release/TicTacToe.Tests.dll
+  - mono ./TicTacToe/TicTacToe.Tests/packages/NUnit.Runners.2.6.4/tools/nunit-console-x86.exe ./TicTacToe/TicTacToe.Tests/bin/Debug/TicTacToe.Tests.dll
