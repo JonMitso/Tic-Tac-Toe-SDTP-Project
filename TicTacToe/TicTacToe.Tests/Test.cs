@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using MyGame;
 using SwinGameSDK;
+using Color = SwinGameSDK.Color;
 
 namespace TicTacToe.Tests
 {
